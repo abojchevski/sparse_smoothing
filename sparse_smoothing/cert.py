@@ -127,16 +127,18 @@ def regions_discrete(ra, rd, rc, k, pf_plus, pf_minus, precision=1000):
     """
     with gmpy2.context(precision=precision):
         pf_plus, pf_minus = gmpy2.mpfr(pf_plus), gmpy2.mpfr(pf_minus)
+        one =  gmpy2.mpfr(1)
+
     ra, rd, rc = int(ra), int(rd), int(rc)
 
-    a0 = (1-pf_plus)
+    a0 = (one-pf_plus)
     b0 = pf_plus/(k-1)
-    c0 = 1 - a0 - b0
+    c0 = one - a0 - b0
     dist_0 = [a0, b0, c0]
 
-    a1 = (1-pf_minus)
+    a1 = (one-pf_minus)
     b1 = pf_minus/(k-1)
-    c1 = 1 - a1 - b1
+    c1 = one - a1 - b1
     dist_1 = [a1, b1, c1]
 
     regions = defaultdict(float)
