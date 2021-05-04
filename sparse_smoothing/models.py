@@ -4,6 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import transforms
 from torch_geometric.nn import GCNConv, GATConv, APPNP, GINConv, global_mean_pool, JumpingKnowledge
+from torch_geometric.nn.conv.gcn_conv import gcn_norm
 from torch_geometric.utils import add_remaining_self_loops
 from torch_sparse import spmm
 from sparse_smoothing.utils import to_undirected
@@ -15,8 +16,9 @@ class SparseGCNConv(GCNConv):
 
     def forward(self, x, edge_idx, n, d):
         x = spmm(x, torch.ones_like(x[0]), n, d, self.weight)
-        edge_idx, norm = self.norm(edge_idx, x.size(0), None, self.improved, x.dtype)
-        return self.propagate(edge_idx, x=x, norm=norm)
+        edge_idx, norm = gcn_norm(edge_idx, None, x.size(0), self.improved, self.add_self_loops, x.dtype)
+        return self.propagate(edge_idx, x=x, edge_weight=norm, size=None)
+
 
 
 class SparseGATConv(GATConv):
