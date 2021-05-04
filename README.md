@@ -1,5 +1,8 @@
 ## Efficient Robustness Certificates for Discrete Data 
 
+<p align="center">
+<img src="https://www.in.tum.de/fileadmin/w00bws/daml/sparse_smoothing/sparse_smoothing.png" width="500">
+
 Reference implementation of the certificates proposed in the paper:
 
 ["Efficient Robustness Certificates for Discrete Data: Sparsity-Aware Randomized Smoothing for Graphs, Images and More"](https://proceedings.icml.cc/static/paper_files/icml/2020/6890-Paper.pdf)
