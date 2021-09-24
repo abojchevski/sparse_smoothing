@@ -389,6 +389,9 @@ def load_and_standardize(file_name):
         if 'type' in loader:
             del loader['type']
         graph = SparseGraph.from_flat_dict(loader)
+    
+    graph.standardize()
+    
     # binarize
     graph._flag_writeable(True)
     graph.adj_matrix[graph.adj_matrix != 0] = 1
