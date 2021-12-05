@@ -5,7 +5,7 @@
 
 Reference implementation of the certificates proposed in the paper:
 
-["Efficient Robustness Certificates for Discrete Data: Sparsity-Aware Randomized Smoothing for Graphs, Images and More"](https://proceedings.icml.cc/static/paper_files/icml/2020/6890-Paper.pdf)
+["Efficient Robustness Certificates for Discrete Data: Sparsity-Aware Randomized Smoothing for Graphs, Images and More"](https://arxiv.org/abs/2008.12952)
 
 Aleksandar Bojchevski, Johannes Klicpera, and Stephan Günnemann, ICML 2020.
 
