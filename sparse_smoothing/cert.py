@@ -743,7 +743,7 @@ def binary_certificate(votes, pre_votes, n_samples, conf_alpha, pf_plus, pf_minu
     return grid_base, grid_lower, grid_upper
 
 
-def joint_binary_certficate(votes, pre_votes, n_samples, conf_alpha,
+def joint_binary_certificate(votes, pre_votes, n_samples, conf_alpha,
                             pf_plus_adj, pf_minus_adj, pf_plus_att, pf_minus_att
                             ):
     """
