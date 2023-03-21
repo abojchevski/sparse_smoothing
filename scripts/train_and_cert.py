@@ -59,7 +59,7 @@ def run(_config, dataset, n_per_class, seed,
     from sparse_smoothing.models import GCN, GAT, APPNPNet, CNN_MNIST, GIN
     from sparse_smoothing.training import train_gnn, train_pytorch
     from sparse_smoothing.prediction import predict_smooth_gnn, predict_smooth_pytorch
-    from sparse_smoothing.cert import binary_certificate, joint_binary_certficate
+    from sparse_smoothing.cert import binary_certificate, joint_binary_certificate
     from sparse_smoothing.utils import (load_and_standardize, split, accuracy_majority,
                                         sample_perturbed_mnist, sample_batch_pyg, get_mnist_dataloaders)
     from torch_geometric.datasets import TUDataset
@@ -248,7 +248,7 @@ def run(_config, dataset, n_per_class, seed,
             votes=votes, pre_votes=pre_votes, n_samples=n_samples_eval, conf_alpha=conf_alpha,
             pf_plus=pf_plus_adj, pf_minus=pf_minus_adj)
     else:
-        grid_base, grid_lower, grid_upper = joint_binary_certficate(
+        grid_base, grid_lower, grid_upper = joint_binary_certificate(
             votes=votes, pre_votes=pre_votes, n_samples=n_samples_eval, conf_alpha=conf_alpha,
             pf_plus_adj=pf_plus_adj, pf_minus_adj=pf_minus_adj,
             pf_plus_att=pf_plus_att, pf_minus_att=pf_minus_att)
