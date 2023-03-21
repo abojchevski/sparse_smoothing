@@ -631,7 +631,7 @@ def joint_binary_certificate_grid(pf_plus_adj, pf_minus_adj, pf_plus_att, pf_min
     """
     if progress_bar:
         def bar(loop):
-            return tqdm.tqdm(loop)
+            return tqdm(loop)
     else:
         def bar(loop):
             return loop
@@ -670,7 +670,7 @@ def joint_binary_certificate_grid(pf_plus_adj, pf_minus_adj, pf_plus_att, pf_min
                                                           range(max_rd_adj + extra),
                                                           range(max_ra_att + extra),
                                                           range(max_rd_att + extra))):
-            _, _, cur_cross_regions = cross_regions(
+            _, _, cur_cross_regions = joint_regions(
                 ra_adj=ra_adj, rd_adj=rd_adj, ra_att=ra_att, rd_att=rd_att,
                 pf_plus_adj=pf_plus_adj, pf_minus_adj=pf_minus_adj,
                 pf_plus_att=pf_plus_att, pf_minus_att=pf_minus_att,
