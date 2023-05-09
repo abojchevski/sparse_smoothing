@@ -1,7 +1,7 @@
 ## Efficient Robustness Certificates for Discrete Data 
 
 <p align="center">
-<img src="https://www.in.tum.de/fileadmin/w00bws/daml/sparse_smoothing/sparse_smoothing.png" width="500">
+<img src="https://www.cs.cit.tum.de/fileadmin/_processed_/f/6/csm_sparse_smoothing_c062042b99.png" width="500">
 
 Reference implementation of the certificates proposed in the paper:
 
